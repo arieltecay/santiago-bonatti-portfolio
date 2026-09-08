@@ -11,22 +11,22 @@ interface SkillsProps {
 
 const Skills: React.FC<SkillsProps> = ({ education, complementaryTraining, aptitudes, languages }) => {
   return (
-    <section id="formation" className="py-12 px-6">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+    <section id="formation" className="py-10 md:py-12 px-4 md:px-6">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         {/* Bloque: Educación y Formación Complementaria */}
-        <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
-          <div className="flex items-center gap-3 mb-8">
+        <div className="bg-white p-5 md:p-8 rounded-3xl border border-slate-100 shadow-sm">
+          <div className="flex items-center gap-3 mb-6 md:mb-8">
             <div className="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600">
               <GraduationCap size={24} />
             </div>
-            <h2 className="text-2xl font-bold text-slate-900">Formación Académica</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900">Formación Académica</h2>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-6 md:space-y-8">
             {education.map((edu, idx) => (
               <div key={idx} className="relative pl-6 border-l-2 border-slate-50">
                 <div className="absolute top-0 -left-1.5 w-3 h-3 bg-blue-600 rounded-full" />
-                <h3 className="text-lg font-bold text-slate-900 leading-snug">{edu.degree}</h3>
+                <h3 className="text-base md:text-lg font-bold text-slate-900 leading-snug">{edu.degree}</h3>
                 <p className="text-blue-600 text-sm font-medium mt-1">{edu.institution}</p>
                 {edu.period && <p className="text-slate-400 text-xs mt-1">{edu.period}</p>}
                 {edu.details && <p className="text-slate-500 text-sm mt-2 italic">{edu.details}</p>}
@@ -77,19 +77,19 @@ const Skills: React.FC<SkillsProps> = ({ education, complementaryTraining, aptit
         </div>
 
         {/* Bloque: Aptitudes */}
-        <div className="bg-slate-900 p-8 rounded-3xl shadow-xl text-white">
-          <div className="flex items-center gap-3 mb-8">
+        <div className="bg-slate-900 p-5 md:p-8 rounded-3xl shadow-xl text-white">
+          <div className="flex items-center gap-3 mb-6 md:mb-8">
             <div className="w-12 h-12 bg-slate-800 rounded-2xl flex items-center justify-center text-blue-400">
               <CheckCircle2 size={24} />
             </div>
-            <h2 className="text-2xl font-bold">Habilidades & Aptitudes</h2>
+            <h2 className="text-xl md:text-2xl font-bold">Habilidades & Aptitudes</h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
             {aptitudes.map((skill, idx) => (
-              <div key={idx} className="flex items-center gap-3 bg-slate-800/50 p-4 rounded-2xl border border-slate-700/50 hover:bg-slate-800 transition-colors group">
+              <div key={idx} className="flex items-center gap-3 bg-slate-800/50 p-3.5 md:p-4 rounded-2xl border border-slate-700/50 hover:bg-slate-800 transition-colors group">
                 <div className="w-2 h-2 bg-blue-500 rounded-full group-hover:scale-125 transition-transform" />
-                <span className="text-slate-200 font-medium">{skill}</span>
+                <span className="text-slate-200 text-sm md:text-base font-medium">{skill}</span>
               </div>
             ))}
           </div>

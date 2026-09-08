@@ -13,18 +13,18 @@ const activityIcons: Record<Activity['icon'], React.ReactNode> = {
 
 const Activities: React.FC<{ activities: Activity[] }> = ({ activities }) => {
   return (
-    <section id="activities" className="py-12 px-6">
+    <section id="activities" className="py-10 md:py-12 px-4 md:px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="flex items-center justify-between mb-8">
-          <h2 className="text-3xl font-bold text-slate-900">Actividades y Distinciones</h2>
-          <div className="h-px flex-1 bg-slate-100 mx-8 hidden md:block"></div>
+        <div className="flex items-center justify-between mb-6 md:mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Actividades y Distinciones</h2>
+          <div className="h-px flex-1 bg-slate-100 mx-6 hidden md:block"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {activities.map((activity, idx) => (
             <div
               key={idx}
-              className={`p-6 rounded-3xl border transition-all print-card ${
+              className={`p-5 md:p-6 rounded-3xl border transition-all print-card ${
                 activity.featured
                   ? 'bg-blue-600 text-white border-blue-600 shadow-xl md:col-span-2 lg:col-span-1'
                   : 'bg-white text-slate-900 border-slate-100 shadow-sm hover:shadow-md'

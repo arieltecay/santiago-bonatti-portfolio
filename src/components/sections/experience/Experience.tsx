@@ -28,15 +28,15 @@ const ExperienceItem: React.FC<{ item: ExperienceType }> = ({ item }) => {
     <div className="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden mb-4 transition-all hover:shadow-md print-card">
       <button
         onClick={handleToggle}
-        className="w-full text-left p-6 flex flex-col md:flex-row md:items-start justify-between gap-4 relative group"
+        className="w-full text-left p-4 md:p-6 flex flex-col md:flex-row md:items-start justify-between gap-4 relative group"
       >
         <div className="flex gap-4 items-start flex-1 pr-8 md:pr-0">
-          <div className="w-12 h-12 bg-slate-50 rounded-2xl flex-shrink-0 flex items-center justify-center text-slate-400 group-hover:bg-blue-50 group-hover:text-blue-500 transition-colors print:hidden">
-            <Briefcase size={24} />
+          <div className="w-10 h-10 md:w-12 md:h-12 bg-slate-50 rounded-2xl flex-shrink-0 flex items-center justify-center text-slate-400 group-hover:bg-blue-50 group-hover:text-blue-500 transition-colors print:hidden">
+            <Briefcase size={22} />
           </div>
           <div>
-            <h3 className="text-xl font-bold text-slate-900 leading-tight">{item.position}</h3>
-            <p className="text-blue-600 font-medium mb-2">{item.company}</p>
+            <h3 className="text-base md:text-xl font-bold text-slate-900 leading-tight">{item.position}</h3>
+            <p className="text-blue-600 text-sm md:text-base font-medium mb-2">{item.company}</p>
 
             {/* Fechas visibles en móviles debajo del título */}
             <div className="flex md:hidden flex-wrap items-center gap-x-4 gap-y-1 text-xs font-semibold text-slate-400 uppercase tracking-wider print:flex">
@@ -79,7 +79,7 @@ const ExperienceItem: React.FC<{ item: ExperienceType }> = ({ item }) => {
         transition={{ duration: 0.3, ease: 'easeInOut' }}
         className="overflow-hidden print:!h-auto print:!opacity-100"
       >
-        <div className="px-6 pb-8 pt-2 border-t border-slate-50 bg-slate-50/30 print:bg-transparent print:border-none print:px-0">
+        <div className="px-4 md:px-6 pb-8 pt-2 border-t border-slate-50 bg-slate-50/30 print:bg-transparent print:border-none print:px-0">
           <div className="space-y-4">
             {item.location && (
               <div className="flex items-center gap-2 text-sm font-medium text-slate-400 bg-white w-fit px-3 py-1 rounded-full border border-slate-100 shadow-sm print:shadow-none print:border-none print:px-0 print:text-black">
@@ -110,11 +110,11 @@ const ExperienceItem: React.FC<{ item: ExperienceType }> = ({ item }) => {
 
 const Experience: React.FC<{ experience: ExperienceType[] }> = ({ experience }) => {
   return (
-    <section id="experience" className="py-12 px-6">
+    <section id="experience" className="py-10 md:py-12 px-4 md:px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="flex items-center justify-between mb-8">
-          <h2 className="text-3xl font-bold text-slate-900">Trayectoria Profesional</h2>
-          <div className="h-px flex-1 bg-slate-100 mx-8 hidden md:block"></div>
+        <div className="flex items-center justify-between mb-6 md:mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Trayectoria Profesional</h2>
+          <div className="h-px flex-1 bg-slate-100 mx-6 hidden md:block"></div>
         </div>
 
         <div className="space-y-4">
