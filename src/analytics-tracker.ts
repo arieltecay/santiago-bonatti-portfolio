@@ -16,10 +16,7 @@
   const measurementId = import.meta.env.VITE_GOOGLE_ANALYTICS_MEASUREMENT_ID;
 
   if (!measurementId) {
-    console.warn(
-      'ADVERTENCIA: La variable VITE_GOOGLE_ANALYTICS_MEASUREMENT_ID no está definida en el entorno. ' +
-      'El seguimiento de Google Analytics está deshabilitado.'
-    );
+    // Sin ID configurado: analytics queda deshabilitado en silencio (propiedad GA4 pendiente)
     return;
   }
 

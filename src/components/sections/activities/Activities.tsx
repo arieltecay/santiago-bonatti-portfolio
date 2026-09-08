@@ -1,6 +1,6 @@
 import React from 'react';
 import { Activity } from '../../../data/cv-data';
-import { Award, BookOpen, Presentation, Briefcase, Search, Users, Sparkles } from 'lucide-react';
+import { Award, BookOpen, Presentation, Briefcase, Search, Users } from 'lucide-react';
 
 const activityIcons: Record<Activity['icon'], React.ReactNode> = {
   award: <Award size={22} />,
