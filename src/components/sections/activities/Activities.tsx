@@ -39,12 +39,6 @@ const Activities: React.FC<{ activities: Activity[] }> = ({ activities }) => {
                   {activityIcons[activity.icon]}
                 </div>
                 <div>
-                  {activity.featured && (
-                    <div className="inline-flex items-center gap-1 px-2 py-0.5 bg-white/20 rounded-full text-[10px] font-bold uppercase tracking-wider mb-2 print:bg-slate-100 print:text-slate-600">
-                      <Sparkles size={12} />
-                      Próximo lanzamiento 2026
-                    </div>
-                  )}
                   <h3 className={`font-bold leading-snug ${activity.featured ? 'text-lg' : 'text-base'}`}>
                     {activity.title}
                   </h3>
