@@ -66,7 +66,7 @@ export interface CVProfile {
 }
 
 export const bonattiProfile: CVProfile = {
-  name: 'Santiago Alejandro Bonatti',
+  name: 'Santiago Bonatti',
   title: 'Director de Recursos Humanos',
   profile:
     'Profesional con más de 20 años de trayectoria en Gestión de Recursos Humanos en empresas industriales y corporativas de alcance nacional. Amplia experiencia liderando equipos multidisciplinarios y gestionando dotaciones de hasta 1.750 colaboradores en múltiples provincias. Sólida formación académica complementada con programas de posgrado en RRHH, coaching, inteligencia artificial y relaciones laborales.',

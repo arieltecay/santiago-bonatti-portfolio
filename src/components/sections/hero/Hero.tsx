@@ -10,12 +10,12 @@ const Hero: React.FC<{ profile: CVProfile }> = ({ profile }) => {
         {/* Bloque Principal: Perfil */}
         <div className="md:col-span-8 bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col justify-between print:shadow-none print:border-none print:p-0">
           <div className="flex flex-col md:flex-row gap-8 items-center md:items-start text-left print:flex-row print:gap-6">
-            {/* Foto de Perfil */}
-            <div className="w-32 h-32 md:w-40 md:h-40 bg-blue-50 rounded-3xl overflow-hidden border-4 border-white shadow-xl flex-shrink-0 mx-auto md:mx-0 print:w-28 print:h-28 print:shadow-none print:border-none print:rounded-2xl">
+            {/* Foto de Perfil - Rectangular (ratio 2:3) para no recortar la imagen */}
+            <div className="w-40 aspect-[2/3] md:w-52 bg-blue-50 rounded-3xl overflow-hidden border-4 border-white shadow-xl flex-shrink-0 mx-auto md:mx-0 print:w-28 print:aspect-[2/3] print:shadow-none print:border-none print:rounded-2xl">
               <img
                 src="/profile.png"
                 alt={profile.name}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = 'https://ui-avatars.com/api/?name=Santiago+Bonatti&background=1e3a8a&color=fff&size=200';
                 }}
