@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1e3a8a;
+  --color-secondary: #334155;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  background: radial-gradient(circle at top right, #f1f5f9 0%, #e2e8f0 100%);
+  background-attachment: fixed;
+  color: #0f172a;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* Estilos de Impresión Profesionales */
+@media print {
+  @page {
+    size: A4;
+    margin: 2.5cm 1.5cm;
+  }
+
+  :root {
+    background: white !important;
+  }
+
+  nav,
+  .no-print,
+  [role="button"],
+  button,
+  footer {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    padding-top: 1cm !important;
+    font-size: 11pt;
+  }
+
+  main {
+    margin-top: 0 !important;
+  }
+
+  section {
+    padding-top: 1cm !important;
+    padding-bottom: 1cm !important;
+    border-bottom: 1pt solid #eee;
+    break-inside: avoid;
+  }
+
+  /* Evitar que las tarjetas se corten entre páginas */
+  .print-card {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    display: block !important;
+    position: relative !important;
+    margin-bottom: 0.5cm !important;
+    border: 1px solid #f1f5f9 !important;
+    background: white !important;
+    padding: 1rem !important;
+  }
+
+  h1 { font-size: 24pt !important; }
+  h2 { font-size: 16pt !important; margin-bottom: 0.3cm !important; border-bottom: 1pt solid #eee !important; width: 100% !important; }
+  h3 { font-size: 13pt !important; }
+
+  /* Asegurar visibilidad total del contenido expandible */
+  .motion-div-content,
+  div[style*="height"],
+  .overflow-hidden {
+    height: auto !important;
+    opacity: 1 !important;
+    display: block !important;
+    overflow: visible !important;
+  }
+
+  /* Ocultar elementos de UI interactiva */
+  .no-print,
+  .chevron-container,
+  button svg,
+  nav {
+    display: none !important;
+  }
+
+  /* Reset radical de colores para impresión limpia */
+  .bg-slate-900,
+  .bg-blue-600,
+  .bg-blue-50,
+  .bg-slate-50,
+  .bg-slate-50\/30,
+  .bg-white {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    border-color: #eee !important;
+  }
+
+  .text-white,
+  .text-blue-100,
+  .text-blue-50,
+  .text-slate-400,
+  .text-slate-500,
+  .text-slate-600,
+  .text-blue-600,
+  .text-slate-900,
+  .text-blue-500 {
+    color: black !important;
+  }
+
+  /* Columnas en impresión */
+  .print\:grid-cols-2 {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
