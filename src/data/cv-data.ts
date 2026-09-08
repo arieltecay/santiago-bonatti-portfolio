@@ -263,7 +263,7 @@ export const bonattiProfile: CVProfile = {
     {
       icon: 'book',
       title: 'Autor del libro "Ahora Estamos Juntos"',
-      detail: 'Lanzamiento 2026, Editorial Tinta Libre.',
+      detail: 'Editorial Tinta Libre.',
       featured: true,
     },
   ],
