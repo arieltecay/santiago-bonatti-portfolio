@@ -277,7 +277,7 @@ export const bonattiProfile: CVProfile = {
         detail: 'Gestión de dotaciones de hasta 1.750 colaboradores en 6 provincias, con reporte directo al Directorio en TNPLATEX y ARGENTI GROUP.',
       },
       {
-        title: 'Alcance Multi-Provincial',
+        title: 'Alcance Corporativo',
         detail: 'Liderazgo de RRHH en operaciones distribuidas en Tucumán, Catamarca, La Rioja, Chaco, Corrientes, Buenos Aires, San Juan, Río Negro, Salta, Córdoba y San Luis.',
       },
       {

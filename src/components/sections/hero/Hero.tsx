@@ -45,7 +45,7 @@ const Hero: React.FC<{ profile: CVProfile }> = ({ profile }) => {
             </div>
             <div className="flex items-center gap-2 px-3 md:px-4 py-2 bg-slate-50 rounded-full text-slate-600 text-xs md:text-sm font-medium print:bg-transparent print:p-0 print:text-xs">
               <Building2 size={16} className="text-blue-500 print:text-slate-400" />
-              Alcance Corporativo Multi-Provincial
+              Alcance Corporativo
             </div>
           </div>
         </div>
